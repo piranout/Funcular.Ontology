@@ -34,14 +34,16 @@
 
 #region Usings
 using System;
+using System.Security;
 
 #endregion
 
 
 namespace Funcular.Ontology.Archetypes
 {
-    public interface ICreateable
+    public interface ICreateable<TUserId>
     {
         DateTime DateCreatedUtc { get; set; }
+        TUserId CreatedBy { get; set; }
     }
 }

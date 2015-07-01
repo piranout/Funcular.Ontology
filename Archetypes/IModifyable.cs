@@ -40,8 +40,9 @@ using System;
 
 namespace Funcular.Ontology.Archetypes
 {
-    public interface IModifyable : ICreateable
+    public interface IModifyable<TUserId> : ICreateable<TUserId>
     {
         DateTime? DateModifiedUtc { get; set; }
+        TUserId ModifiedBy { get; set; }
     }
 }

@@ -2,7 +2,7 @@
 // *********************************************************************************************************
 // Funcular.Ontology>Funcular.Ontology>Createable.cs
 // Created: 2015-07-01 2:16 PM
-// Updated: 2015-07-01 2:26 PM
+// Updated: 2015-07-01 2:50 PM
 // By: Paul Smith 
 // 
 // *********************************************************************************************************
@@ -34,14 +34,15 @@
 
 #region Usings
 using System;
-
 #endregion
 
 
 namespace Funcular.Ontology.Archetypes
 {
-    public abstract class Createable<TId> : IIdentity<TId>, ICreateable
+    public abstract class Createable<TId> : IIdentity<TId>, ICreateable<TId>
     {
+        private TId _createdBy;
+
         protected Createable()
         {
             DateCreatedUtc = DateTime.UtcNow;
@@ -57,6 +58,7 @@ namespace Funcular.Ontology.Archetypes
 
         #region Implementation of ICreateable
         public DateTime DateCreatedUtc { get; set; }
+        public virtual TId CreatedBy { get { return this._createdBy; } set { this._createdBy = value; } }
         #endregion
 
 

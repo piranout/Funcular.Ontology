@@ -40,10 +40,14 @@ using System;
 
 namespace Funcular.Ontology.Archetypes
 {
-    public abstract class Modifyable<TId> : Createable<TId>, IModifyable
+    public abstract class Modifyable<TId> : Createable<TId>, IModifyable<TId>
     {
+        private TId _modifiedBy;
+
+
         #region Implementation of IModifyable
         public virtual DateTime? DateModifiedUtc { get; set; }
+        public virtual TId ModifiedBy { get { return this._modifiedBy; } set { this._modifiedBy = value; } }
         #endregion
     }
 }
