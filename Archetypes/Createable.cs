@@ -39,7 +39,7 @@ using System;
 
 namespace Funcular.Ontology.Archetypes
 {
-    public abstract class Createable<TId> : IIdentity<TId>, ICreateable<TId>
+    public abstract class Createable<TId> : ICreateable<TId>
     {
         private TId _createdBy;
 
@@ -58,7 +58,7 @@ namespace Funcular.Ontology.Archetypes
 
         #region Implementation of ICreateable
         public DateTime DateCreatedUtc { get; set; }
-        public virtual TId CreatedBy { get { return this._createdBy; } set { this._createdBy = value; } }
+        public TId CreatedBy { get { return this._createdBy; } set { this._createdBy = value; } }
         #endregion
 
 

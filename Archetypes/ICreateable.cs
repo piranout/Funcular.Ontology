@@ -39,9 +39,9 @@ using System;
 
 namespace Funcular.Ontology.Archetypes
 {
-    public interface ICreateable<TUserId>
+    public interface ICreateable<TId> : IIdentity<TId>
     {
         DateTime DateCreatedUtc { get; set; }
-        TUserId CreatedBy { get; set; }
+        TId CreatedBy { get; set; }
     }
 }
