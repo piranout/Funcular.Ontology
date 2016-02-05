@@ -3,7 +3,7 @@
 
 * Dispense with boilerplate persistence code. 
 * Apply Id assignment functions to the entire domain.
-* Centralize handling of timestamp and audit trail logic. 
+* Centralize handling of timestamp and audit field logic. 
 * Add extension methods to like-sets of entities. 
 
 ### Examples 
@@ -25,6 +25,11 @@
 	// If you're using the Base36 Id generator with dependency injection:
 	Createable<string>.IdentityFunction = () => _base36.NewId();
 ```
+
+### Type Dependency Diagram
+This diagram shows the inheritance tree of the Funcular.Ontology.Archetypes namespace:
+
+![Dependency Diagram](/Content/DependencyGraph.png?raw=true "Dependency Graph")
 
 ### Leveraging by Funcular.DataProviders
 
@@ -70,3 +75,8 @@ If you use Funcular.DataProviders with Ontology-derived entities, you get some b
       _dataProvider.Update<ThingWithADescription, string>(myThing);
       
 ```
+
+### Class Diagram
+This class diagram shows the signature of each interface and abstract class in the Funcular.Ontology.Archetypes namespace:
+
+![Class Diagram](/Content/ClassDiagram.png?raw=true "Class Diagram")
