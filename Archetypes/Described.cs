@@ -34,10 +34,10 @@
 
 namespace Funcular.Ontology.Archetypes
 {
-    public class Described<TId> : Labeled<TId>, IDescribed
+    public abstract class Described<TId> : Labeled<TId>, IDescribed
     {
         #region Implementation of IDescribed
-        public string Description { get; set; }
+        public virtual string Description { get; set; }
         #endregion
     }
 }

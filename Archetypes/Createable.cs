@@ -52,7 +52,7 @@ namespace Funcular.Ontology.Archetypes
 
 
         #region Implementation of IIdentity
-        public TId Id { get; set; }
+        public virtual TId Id { get; set; }
         #endregion
 
 
