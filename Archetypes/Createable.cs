@@ -45,7 +45,6 @@ namespace Funcular.Ontology.Archetypes
 
         protected Createable()
         {
-            DateCreatedUtc = DateTime.UtcNow;
             if (IdentityFunction != null)
                 Id = IdentityFunction();
         }
@@ -57,17 +56,20 @@ namespace Funcular.Ontology.Archetypes
 
 
         #region Implementation of ICreateable
-        public DateTime DateCreatedUtc { get; set; }
-        public TId CreatedBy { get { return this._createdBy; } set { this._createdBy = value; } }
+        public virtual DateTime DateCreatedUtc { get; set; } = DateTime.UtcNow;
+        public virtual TId CreatedBy { get { return this._createdBy; } set { this._createdBy = value; } }
         #endregion
 
 
         /// <summary>
-        ///     Set this once in your domain and be done, by, e.g., calling
-        ///     Createable.IdentityFunction = () => _generator.NewId();
-        ///     [Assuming you have an Id generator instance of some sort.]
-        ///     Make sure this function does not throw exceptions.
+        ///     Set this once in your app domain and ID assignment is done
+        ///     for all entities.e.g., calling
         /// </summary>
+        /// <example>
+        /// // Assuming you have an Id generator instance...
+        /// Createable.IdentityFunction = () => _generator.NewId();
+        /// // Make sure this function does not throw exceptions.
+        /// </example>
         public static Func<TId> IdentityFunction { get; set; }
     }
 }
