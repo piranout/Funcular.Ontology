@@ -46,7 +46,7 @@ namespace Funcular.Ontology.Archetypes
         protected Createable()
         {
             if (IdentityFunction != null)
-                Id = IdentityFunction();
+                this.Id = IdentityFunction();
         }
 
 

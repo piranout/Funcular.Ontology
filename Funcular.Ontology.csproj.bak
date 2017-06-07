@@ -10,7 +10,7 @@
     <RootNamespace>Funcular.Ontology</RootNamespace>
     <AssemblyName>Funcular.Ontology</AssemblyName>
     <!--<TargetFrameworkVersion>v4.5</TargetFrameworkVersion>-->
-    <TargetFrameworks>netstandard1.6;netcoreapp1.0;netcoreapp1.1;net461</TargetFrameworks>
+    <TargetFrameworks>netstandard1.6;netcoreapp1.0;netcoreapp1.1;net451</TargetFrameworks>
     <FileAlignment>512</FileAlignment>
     <RuntimeIdentifiers>win7-x86;win7-x64</RuntimeIdentifiers>
     <!--<RuntimeIdentifier Condition="'$(TargetFramework)' == 'netcoreapp1.0'">win7-x86</RuntimeIdentifier>
@@ -23,7 +23,7 @@
     <OutputPath Condition="'$(TargetFramework)' == 'netstandard1.6'">bin\Debug\netstandard1.6\</OutputPath>
     <OutputPath Condition="'$(TargetFramework)' == 'netcoreapp1.0'">bin\Debug\netcoreapp1.0\</OutputPath>
     <OutputPath Condition="'$(TargetFramework)' == 'netcoreapp1.1'">bin\Debug\netcoreapp1.1\</OutputPath>
-    <OutputPath Condition="'$(TargetFramework)' == 'net461'">bin\Debug\net461\</OutputPath>
+    <OutputPath Condition="'$(TargetFramework)' == 'net451'">bin\Debug\net451\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -34,7 +34,7 @@
     <OutputPath Condition="'$(TargetFramework)' == 'netstandard1.6'">bin\Release\netstandard1.6\</OutputPath>
     <OutputPath Condition="'$(TargetFramework)' == 'netcoreapp1.0'">bin\Release\netcoreapp1.0\</OutputPath>
     <OutputPath Condition="'$(TargetFramework)' == 'netcoreapp1.1'">bin\Release\netcoreapp1.1\</OutputPath>
-    <OutputPath Condition="'$(TargetFramework)' == 'net461'">bin\Release\net461\</OutputPath>
+    <OutputPath Condition="'$(TargetFramework)' == 'net451'">bin\Release\net451\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -46,7 +46,7 @@
     <PackageReference Include="Microsoft.NETCore.App" Version="1.1.2" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Condition="'$(TargetFramework)' == 'net461'" Include="System" />
+    <Reference Condition="'$(TargetFramework)' == 'net451'" Include="System" />
     <!-- <Reference Include="System.Core" /> -->
     <!-- <Reference Include="System.Xml.Linq" /> -->
     <!-- <Reference Include="System.Data.DataSetExtensions" /> -->

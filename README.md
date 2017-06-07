@@ -6,6 +6,11 @@
 * Centralize handling of timestamp and audit field logic. 
 * Add extension methods to like-sets of entities. 
 
+### Important Note
+Since moving to multi-framework targeting for .NET COre, Visual Studio 
+no longer builds this colution correctly. Use the Package Manager Console 
+instead, just use the `dotnet buiid` command.
+
 ### Examples 
 ```csharp
 // Derive entities from one of the base classes in Archetypes.
